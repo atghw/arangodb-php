@@ -48,7 +48,11 @@ class Analyzer
      * Analyzer features index
      */
     const ENTRY_FEATURES = 'features';
-    
+
+    private array $_features;
+    private array $_properties;
+    private string $_type;
+
     /**
      * Constructs an analyzer
      *

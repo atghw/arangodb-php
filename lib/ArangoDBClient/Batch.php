@@ -85,7 +85,6 @@ class Batch
      */
     private $_nextId = 0;
 
-
     /**
      * Constructor for Batch instance. Batch instance by default starts capturing request after initiated.
      * To disable this, pass startCapture=>false inside the options array parameter
@@ -109,16 +108,15 @@ class Batch
         $options      = array_merge($options, $this->getCursorOptions());
         extract($options, EXTR_IF_EXISTS);
         $this->_sanitize = $sanitize;
-        $this->batchSize = $batchSize;
 
-        if ($this->batchSize > 0) {
-            $this->_batchParts = new \SplFixedArray($this->batchSize);
+        if ($batchSize > 0) {
+            $this->_batchParts = new \SplFixedArray($batchSize);
         }
 
         $this->setConnection($connection);
 
         // set default cursor options. Sanitize is currently the only local one.
-        $this->_batchPartCursorOptions = [Cursor::ENTRY_SANITIZE => (bool) $this->_sanitize];
+        $this->_batchPartCursorOptions = [Cursor::ENTRY_SANITIZE => $this->_sanitize];
 
         if ($startCapture === true) {
             $this->startCapture();

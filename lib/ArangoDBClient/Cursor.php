@@ -107,7 +107,7 @@ class Cursor implements \Iterator
      * whether or not the query result was served from the AQL query result cache
      */
     private $_cached;
-    
+
     /**
      * precalculated number of documents in the cursor, as returned by the server
      *
@@ -196,7 +196,7 @@ class Cursor implements \Iterator
         if (isset($data[self::ENTRY_ID])) {
             $this->_id = $data[self::ENTRY_ID];
         }
-        
+
         if (isset($data[Statement::ENTRY_COUNT])) {
             $this->_count = $data[Statement::ENTRY_COUNT];
         }
@@ -240,7 +240,7 @@ class Cursor implements \Iterator
      * @throws Exception
      * @return bool - true if the server acknowledged the deletion request, false otherwise
      */
-    public function delete()
+    public function delete(): bool
     {
         if ($this->_id) {
             try {
@@ -264,7 +264,7 @@ class Cursor implements \Iterator
      * @throws Exception
      * @return int - total number of results
      */
-    public function getCount()
+    public function getCount(): int
     {
         if ($this->_count !== null) {
             return $this->_count;
@@ -282,7 +282,7 @@ class Cursor implements \Iterator
      *
      * @return int - total number of results
      */
-    public function getFullCount()
+    public function getFullCount(): int
     {
         return $this->_fullCount;
     }
@@ -293,7 +293,7 @@ class Cursor implements \Iterator
      *
      * @return bool - whether or not the query result was served from the AQL query cache
      */
-    public function getCached()
+    public function getCached(): bool
     {
         return $this->_cached;
     }
@@ -308,7 +308,7 @@ class Cursor implements \Iterator
      * @throws Exception
      * @return array - an array of all results
      */
-    public function getAll()
+    public function getAll(): array
     {
         while ($this->_hasMore) {
             $this->fetchOutstanding();
@@ -323,7 +323,7 @@ class Cursor implements \Iterator
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_position = 0;
     }
@@ -334,7 +334,7 @@ class Cursor implements \Iterator
      *
      * @return array - the current result row as an assoc array
      */
-    public function current()
+    public function current(): array
     {
         return $this->_result[$this->_position];
     }
@@ -345,7 +345,7 @@ class Cursor implements \Iterator
      *
      * @return int - the current result row index
      */
-    public function key()
+    public function key(): int
     {
         return $this->_position;
     }
@@ -356,7 +356,7 @@ class Cursor implements \Iterator
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_position;
     }
@@ -371,7 +371,7 @@ class Cursor implements \Iterator
      * @throws Exception
      * @return bool - true if the cursor can be advanced further, false if cursor is at end
      */
-    public function valid()
+    public function valid(): bool
     {
         if ($this->_position <= $this->_length - 1) {
             // we have more results than the current position is
@@ -398,7 +398,7 @@ class Cursor implements \Iterator
      * @return void
      * @throws \ArangoDBClient\ClientException
      */
-    private function add(array $data)
+    private function add(array $data): void
     {
         foreach ($this->sanitize($data) as $row) {
             if (!is_array($row) || (isset($this->_options[self::ENTRY_FLAT]) && $this->_options[self::ENTRY_FLAT])) {
@@ -449,7 +449,7 @@ class Cursor implements \Iterator
      *
      * @return void
      */
-    private function addFlatFromArray($data)
+    private function addFlatFromArray($data): void
     {
         $this->_result[] = $data;
     }
@@ -463,7 +463,7 @@ class Cursor implements \Iterator
      * @return void
      * @throws \ArangoDBClient\ClientException
      */
-    private function addDocumentsFromArray(array $data)
+    private function addDocumentsFromArray(array $data): void
     {
         $_documentClass = $this->_documentClass;
 
@@ -478,7 +478,7 @@ class Cursor implements \Iterator
      * @return void
      * @throws \ArangoDBClient\ClientException
      */
-    private function addPathsFromArray(array $data)
+    private function addPathsFromArray(array $data): void
     {
         $_documentClass = $this->_documentClass;
         $_edgeClass = $this->_edgeClass;
@@ -506,7 +506,7 @@ class Cursor implements \Iterator
      * @return void
      * @throws \ArangoDBClient\ClientException
      */
-    private function addShortestPathFromArray(array $data)
+    private function addShortestPathFromArray(array $data): void
     {
         $_documentClass = $this->_documentClass;
         $_edgeClass = $this->_edgeClass;
@@ -550,7 +550,7 @@ class Cursor implements \Iterator
      *
      * @return void
      */
-    private function addDistanceToFromArray(array $data)
+    private function addDistanceToFromArray(array $data): void
     {
         $entry           = [
             'source'      => $data['startVertex'],
@@ -568,7 +568,7 @@ class Cursor implements \Iterator
      * @return void
      * @throws \ArangoDBClient\ClientException
      */
-    private function addCommonNeighborsFromArray(array $data)
+    private function addCommonNeighborsFromArray(array $data): void
     {
         $_documentClass = $this->_documentClass;
 
@@ -594,7 +594,7 @@ class Cursor implements \Iterator
      *
      * @return void
      */
-    private function addCommonPropertiesFromArray(array $data)
+    private function addCommonPropertiesFromArray(array $data): void
     {
         $k                 = array_keys($data);
         $k                 = $k[0];
@@ -613,7 +613,7 @@ class Cursor implements \Iterator
      *
      * @return void
      */
-    private function addFigureFromArray(array $data)
+    private function addFigureFromArray(array $data): void
     {
         $this->_result = $data;
     }
@@ -626,7 +626,7 @@ class Cursor implements \Iterator
      * @return void
      * @throws \ArangoDBClient\ClientException
      */
-    private function addEdgesFromArray(array $data)
+    private function addEdgesFromArray(array $data): void
     {
         $_edgeClass = $this->_edgeClass;
 
@@ -642,7 +642,7 @@ class Cursor implements \Iterator
      * @return void
      * @throws \ArangoDBClient\ClientException
      */
-    private function addVerticesFromArray(array $data)
+    private function addVerticesFromArray(array $data): void
     {
         $_documentClass = $this->_documentClass;
 
@@ -660,7 +660,7 @@ class Cursor implements \Iterator
      *
      * @return array - sanitized rows
      */
-    private function sanitize(array $rows)
+    private function sanitize(array $rows): array
     {
         $_documentClass = $this->_documentClass;
 
@@ -687,7 +687,7 @@ class Cursor implements \Iterator
      * @throws Exception
      * @return void
      */
-    private function fetchOutstanding()
+    private function fetchOutstanding(): void
     {
         // continuation
         $response = $this->_connection->post($this->url() . '/' . $this->_id, '', []);
@@ -712,7 +712,7 @@ class Cursor implements \Iterator
      *
      * @return void
      */
-    private function updateLength()
+    private function updateLength(): void
     {
         $this->_length = count($this->_result);
     }
@@ -723,7 +723,7 @@ class Cursor implements \Iterator
      *
      * @return string
      */
-    private function url()
+    private function url(): string
     {
         if (isset($this->_options[self::ENTRY_BASEURL])) {
             return $this->_options[self::ENTRY_BASEURL];
@@ -740,7 +740,7 @@ class Cursor implements \Iterator
      *
      * @return int
      */
-    private function getStatValue($name)
+    private function getStatValue($name): int
     {
         if (isset($this->_extra[self::ENTRY_STATS][$name])) {
             return $this->_extra[self::ENTRY_STATS][$name];
@@ -754,7 +754,7 @@ class Cursor implements \Iterator
      *
      * @return array
      */
-    public function getMetadata()
+    public function getMetadata(): array
     {
         return $this->data;
     }
@@ -765,7 +765,7 @@ class Cursor implements \Iterator
      *
      * @return array
      */
-    public function getExtra()
+    public function getExtra(): array
     {
         return $this->_extra;
     }
@@ -775,7 +775,7 @@ class Cursor implements \Iterator
      *
      * @return array
      */
-    public function getWarnings()
+    public function getWarnings(): array
     {
         if (isset($this->_extra['warnings'])) {
             return $this->_extra['warnings'];
@@ -789,7 +789,7 @@ class Cursor implements \Iterator
      *
      * @return int
      */
-    public function getWritesExecuted()
+    public function getWritesExecuted(): int
     {
         return $this->getStatValue('writesExecuted');
     }
@@ -799,7 +799,7 @@ class Cursor implements \Iterator
      *
      * @return int
      */
-    public function getWritesIgnored()
+    public function getWritesIgnored(): int
     {
         return $this->getStatValue('writesIgnored');
     }
@@ -809,7 +809,7 @@ class Cursor implements \Iterator
      *
      * @return int
      */
-    public function getScannedFull()
+    public function getScannedFull(): int
     {
         return $this->getStatValue('scannedFull');
     }
@@ -819,7 +819,7 @@ class Cursor implements \Iterator
      *
      * @return int
      */
-    public function getScannedIndex()
+    public function getScannedIndex(): int
     {
         return $this->getStatValue('scannedIndex');
     }
@@ -829,22 +829,22 @@ class Cursor implements \Iterator
      *
      * @return int
      */
-    public function getFiltered()
+    public function getFiltered(): int
     {
         return $this->getStatValue('filtered');
     }
-    
+
     /**
      * Return the peak memory usage of the query
      *
      * @return int
      */
-    public function getPeakMemoryUsage()
+    public function getPeakMemoryUsage(): int
     {
         return $this->getStatValue('peakMemoryUsage');
     }
-    
-    
+
+
     /**
      * Return the execution time of the query
      *
@@ -860,7 +860,7 @@ class Cursor implements \Iterator
      *
      * @return int
      */
-    public function getFetches()
+    public function getFetches(): int
     {
         return $this->_fetches;
     }
@@ -870,7 +870,7 @@ class Cursor implements \Iterator
      *
      * @return string
      */
-    public function getId()
+    public function getId(): ?string
     {
         return $this->_id;
     }

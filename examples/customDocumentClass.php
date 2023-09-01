@@ -72,12 +72,12 @@ abstract class AbstractEntity extends Document implements \JsonSerializable
     /**
      * Specify data which should be serialized to JSON
      *
-     * @link  http://php.net/manual/en/jsonserializable.jsonserialize.php
-     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * @param array $options * @return mixed data which can be serialized by <b>json_encode</b>,
      *        which is a value of any type other than a resource.
+     * @link  http://php.net/manual/en/jsonserializable.jsonserialize.php
      * @since 3.2
      */
-    public function jsonSerialize()
+    public function jsonSerialize(array $options = []): mixed
     {
         return $this->getAll();
     }

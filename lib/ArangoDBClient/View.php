@@ -50,7 +50,14 @@ class View
      * View type index
      */
     const ENTRY_TYPE = 'type';
-    
+
+    /**
+     * The view type
+     *
+     * @var string - view name
+     */
+    private string $_type;
+
     /**
      * Constructs an empty view
      *

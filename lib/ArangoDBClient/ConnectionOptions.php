@@ -69,23 +69,23 @@ class ConnectionOptions implements \ArrayAccess
      * @deprecated superseded by OPTION_CONNECT_TIMEOUT and OPTION_REQUEST_TIMEOUT
      */
     const OPTION_TIMEOUT = 'timeout';
-    
+
     /**
      * Connect timeout value index constant
      */
     const OPTION_CONNECT_TIMEOUT = 'connectTimeout';
-    
+
     /**
      * Request timeout value index constant
      */
     const OPTION_REQUEST_TIMEOUT = 'requestTimeout';
-    
+
     /**
      * Number of servers tried in case of failover
      * if set to 0, then an unlimited amount of servers will be tried
      */
     const OPTION_FAILOVER_TRIES = 'failoverTries';
-    
+
     /**
      * Max amount of time (in seconds) that is spent waiting on failover
      */
@@ -100,7 +100,7 @@ class ConnectionOptions implements \ArrayAccess
      * "verify certificates" index constant
      */
     const OPTION_VERIFY_CERT = 'verifyCert';
-    
+
     /**
      * "verify certificate host name" index constant
      */
@@ -110,7 +110,7 @@ class ConnectionOptions implements \ArrayAccess
      * "allow self-signed" index constant
      */
     const OPTION_ALLOW_SELF_SIGNED = 'allowSelfSigned';
-    
+
     /**
      * "caFile" index constant
      */
@@ -180,7 +180,7 @@ class ConnectionOptions implements \ArrayAccess
      * Wait for sync index constant
      */
     const OPTION_IS_SYSTEM = 'isSystem';
-    
+
     /**
      * Authentication JWT
      */
@@ -230,32 +230,32 @@ class ConnectionOptions implements \ArrayAccess
      * UTF-8 CHeck Flag
      */
     const OPTION_CHECK_UTF8_CONFORM = 'CheckUtf8Conform';
-            
+
     /**
      * Entry for memcached servers array
      */
     const OPTION_MEMCACHED_SERVERS = 'memcachedServers';
-    
+
     /**
      * Entry for memcached options array
      */
     const OPTION_MEMCACHED_OPTIONS = 'memcachedOptions';
-    
+
     /**
      * Entry for memcached endpoints key
      */
     const OPTION_MEMCACHED_ENDPOINTS_KEY = 'memcachedEndpointsKey';
-    
+
     /**
      * Entry for memcached persistend id
      */
     const OPTION_MEMCACHED_PERSISTENT_ID = 'memcachedPersistentId';
-    
+
     /**
      * Entry for memcached cache ttl
      */
     const OPTION_MEMCACHED_TTL = 'memcachedTtl';
-    
+
     /**
      * Entry for notification callback
      */
@@ -271,8 +271,8 @@ class ConnectionOptions implements \ArrayAccess
     public function __construct(array $options)
     {
         $this->_values = array_merge(self::getDefaults(), $options);
-        
-        if (isset($this->_values[self::OPTION_ENDPOINT]) && 
+
+        if (isset($this->_values[self::OPTION_ENDPOINT]) &&
             !is_array($this->_values[self::OPTION_ENDPOINT])) {
             $this->_values[self::OPTION_ENDPOINT] = [ $this->_values[self::OPTION_ENDPOINT] ];
         }
@@ -286,7 +286,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return array - all options as an array
      */
-    public function getAll()
+    public function getAll(): array
     {
         return $this->_values;
     }
@@ -301,7 +301,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->_values[$offset] = $value;
         if ($offset === self::OPTION_CONNECT_TIMEOUT || $offset === self::OPTION_REQUEST_TIMEOUT) {
@@ -319,7 +319,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return bool - true if option exists, false otherwise
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->_values[$offset]);
     }
@@ -333,7 +333,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->_values[$offset]);
         $this->validate();
@@ -348,7 +348,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return mixed - value of option, will throw if option is not set
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if (!array_key_exists($offset, $this->_values)) {
             throw new ClientException('Invalid option ' . $offset);
@@ -362,18 +362,18 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return string - Endpoint string to connect to
      */
-    public function getCurrentEndpoint() 
+    public function getCurrentEndpoint(): string
     {
         assert(is_array($this->_values[self::OPTION_ENDPOINT]));
         return $this->_values[self::OPTION_ENDPOINT][$this->_currentEndpointIndex];
     }
-    
+
     /**
      * Whether or not we have multiple endpoints to connect to
      *
      * @return bool - true if we have more than one endpoint to connect to
      */
-    public function haveMultipleEndpoints() 
+    public function haveMultipleEndpoints(): bool
     {
         assert(is_array($this->_values[self::OPTION_ENDPOINT]));
         return count($this->_values[self::OPTION_ENDPOINT]) > 1;
@@ -388,7 +388,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return void
      */
-    public function addEndpoint($endpoint) 
+    public function addEndpoint($endpoint): void
     {
         if (!is_string($endpoint) || !Endpoint::isValid($endpoint)) {
             throw new ClientException(sprintf("invalid endpoint specification '%s'", $endpoint));
@@ -405,7 +405,7 @@ class ConnectionOptions implements \ArrayAccess
                 break;
             }
         }
-        
+
         if ($found === false) {
             // a new endpoint we have not seen before
             $this->_values[self::OPTION_ENDPOINT][] = $endpoint;
@@ -414,14 +414,14 @@ class ConnectionOptions implements \ArrayAccess
 
         $this->storeOptionsInCache();
     }
-                            
+
     /**
      * Return the next endpoint from the list of endpoints
      * As a side-effect this function switches to a new endpoint
      *
      * @return string - the next endpoint
      */
-    public function nextEndpoint() 
+    public function nextEndpoint(): string
     {
         assert(is_array($this->_values[self::OPTION_ENDPOINT]));
         $endpoints = $this->_values[self::OPTION_ENDPOINT];
@@ -447,7 +447,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return array - array of default connection options
      */
-    private static function getDefaults()
+    private static function getDefaults(): array
     {
         return [
             self::OPTION_ENDPOINT                => [ ],
@@ -494,7 +494,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return array - array with supported authorization types
      */
-    private static function getSupportedAuthTypes()
+    private static function getSupportedAuthTypes(): array
     {
         return ['Basic', 'Bearer'];
     }
@@ -504,7 +504,7 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return array - array with supported connection types
      */
-    private static function getSupportedConnectionTypes()
+    private static function getSupportedConnectionTypes(): array
     {
         return ['Close', 'Keep-Alive'];
     }
@@ -515,7 +515,7 @@ class ConnectionOptions implements \ArrayAccess
      * @throws ClientException
      * @return void - will throw if an invalid option value is found
      */
-    private function validate()
+    private function validate(): void
     {
         if (isset($this->_values[self::OPTION_HOST]) && !is_string($this->_values[self::OPTION_HOST])) {
             throw new ClientException('host should be a string');
@@ -535,17 +535,17 @@ class ConnectionOptions implements \ArrayAccess
             $this->_values[self::OPTION_ENDPOINT] = [ 'tcp://' . $this->_values[self::OPTION_HOST] . ':' . $this->_values[self::OPTION_PORT] ];
             unset($this->_values[self::OPTION_HOST]);
         }
-        
+
         if (!is_array($this->_values[self::OPTION_ENDPOINT])) {
             // make sure that we always have an array of endpoints
             $this->_values[self::OPTION_ENDPOINT] = [ $this->_values[self::OPTION_ENDPOINT] ];
         }
-        
+
         assert(is_array($this->_values[self::OPTION_ENDPOINT]));
         foreach ($this->_values[self::OPTION_ENDPOINT] as $key => $value) {
             $this->_values[self::OPTION_ENDPOINT][$key] = Endpoint::normalize($value);
         }
-        
+
         if (count($this->_values[self::OPTION_ENDPOINT]) > 1) {
             // when we have more than a single endpoint, we must always use the reconnect option
             $this->_values[ConnectionOptions::OPTION_RECONNECT] = true;
@@ -565,13 +565,13 @@ class ConnectionOptions implements \ArrayAccess
             // must set port to 0 for SSL connections
             $this->_values[self::OPTION_PORT] = 0;
         } else {
-          if (preg_match("/:(\d+)$/", $ep, $match)) {
-            // get port number from endpoint, to not confuse developers when dumping
-            // connection details
-            $this->_values[self::OPTION_PORT] = (int) $match[1];
-          }
+            if (preg_match("/:(\d+)$/", $ep, $match)) {
+                // get port number from endpoint, to not confuse developers when dumping
+                // connection details
+                $this->_values[self::OPTION_PORT] = (int) $match[1];
+            }
         }
-        
+
         if (isset($this->_values[self::OPTION_AUTH_TYPE]) && !in_array(
                 $this->_values[self::OPTION_AUTH_TYPE],
                 self::getSupportedAuthTypes(), true
@@ -592,7 +592,7 @@ class ConnectionOptions implements \ArrayAccess
                 )
             );
         }
-        
+
         if (isset($this->_values[self::OPTION_TIMEOUT])) {
             // propagate values from OPTION_TIMOEUT into OPTION_CONNECT_TIMEOUT and OPTION_REQUEST_TIMEOUT
             $this->_values[self::OPTION_CONNECT_TIMEOUT] = (float) $this->_values[self::OPTION_TIMEOUT];
@@ -611,14 +611,14 @@ class ConnectionOptions implements \ArrayAccess
      *
      * @return void
      */
-    private function loadOptionsFromCache() 
+    private function loadOptionsFromCache(): void
     {
         $cache = $this->getEndpointsCache();
 
         if ($cache === null) {
             return;
         }
-        
+
         $endpoints = $cache->get($this->_values[self::OPTION_MEMCACHED_ENDPOINTS_KEY]);
         if ($endpoints) {
             $this->_values[self::OPTION_ENDPOINT] = $endpoints;
@@ -627,13 +627,13 @@ class ConnectionOptions implements \ArrayAccess
             }
         }
     }
-    
+
     /**
      * store the updated options in the optional Memcached cache
      *
      * @return void
      */
-    private function storeOptionsInCache() 
+    private function storeOptionsInCache(): void
     {
         $endpoints = $this->_values[self::OPTION_ENDPOINT];
         $numberOfEndpoints = count($endpoints);
@@ -647,7 +647,7 @@ class ConnectionOptions implements \ArrayAccess
         if ($cache === null) {
             return;
         }
-        
+
         $update = [ $endpoints[$this->_currentEndpointIndex] ];
         for ($i = 0; $i < $numberOfEndpoints; ++$i) {
             if ($i !== $this->_currentEndpointIndex) {
@@ -657,15 +657,16 @@ class ConnectionOptions implements \ArrayAccess
 
         $ttl = (int) $this->_values[self::OPTION_MEMCACHED_TTL];
         $cache->set($this->_values[self::OPTION_MEMCACHED_ENDPOINTS_KEY], $update, $ttl);
-      }
+    }
 
     /**
-     * Initialize and return a memcached cache instance, 
+     * Initialize and return a memcached cache instance,
      * if option "memcachedServers" is set
      *
      * @return Memcached - memcached server instance if configured or null if not
+     * @throws ClientException
      */
-    private function getEndpointsCache() 
+    private function getEndpointsCache(): ?\Memcached
     {
         if ($this->_cache === null) {
             if (!isset($this->_values[self::OPTION_MEMCACHED_SERVERS])) {
@@ -684,7 +685,7 @@ class ConnectionOptions implements \ArrayAccess
             if (empty($cache->getServerList())) {
                 $cache->addServers($servers);
             }
-            
+
             if (isset($this->_values[self::OPTION_MEMCACHED_OPTIONS])) {
                 $options = $this->_values[self::OPTION_MEMCACHED_OPTIONS];
                 if (!is_array($options)) {
@@ -694,7 +695,7 @@ class ConnectionOptions implements \ArrayAccess
             }
 
             $this->_cache = $cache;
-        
+
         }
         return $this->_cache;
     }

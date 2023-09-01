@@ -784,9 +784,9 @@ class Document implements \JsonSerializable
      *                       <li>'_ignoreHiddenAttributes' - true to show hidden attributes. Defaults to false</li>
      *                       </p>
      *
-     * @return array - array of all document attributes/values
+     * @return mixed - array of all document attributes/values
      */
-    public function jsonSerialize(array $options = [])
+    public function jsonSerialize(array $options = []): mixed
     {
         return $this->getAll($options);
     }
