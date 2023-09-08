@@ -182,67 +182,67 @@ class Statement
     /**
      * Query string index
      */
-    const ENTRY_QUERY = 'query';
+    public const ENTRY_QUERY = 'query';
 
     /**
      * Count option index
      */
-    const ENTRY_COUNT = 'count';
+    public const ENTRY_COUNT = 'count';
 
     /**
      * Batch size index
      */
-    const ENTRY_BATCHSIZE = 'batchSize';
+    public const ENTRY_BATCHSIZE = 'batchSize';
 
     /**
      * Retries index
      */
-    const ENTRY_RETRIES = 'retries';
+    public const ENTRY_RETRIES = 'retries';
 
     /**
      * Bind variables index
      */
-    const ENTRY_BINDVARS = 'bindVars';
+    public const ENTRY_BINDVARS = 'bindVars';
     
     /**
      * Fail on warning flag
      */
-    const ENTRY_FAIL_ON_WARNING = 'failOnWarning';
+    public const ENTRY_FAIL_ON_WARNING = 'failOnWarning';
     
     /**
      * Profile flag
      */
-    const ENTRY_PROFILE = 'profile';
+    public const ENTRY_PROFILE = 'profile';
     
     /**
      * Memory limit threshold for query
      */
-    const ENTRY_MEMORY_LIMIT = 'memoryLimit';
+    public const ENTRY_MEMORY_LIMIT = 'memoryLimit';
 
     /**
      * Full count option index
      */
-    const FULL_COUNT = 'fullCount';
+    public const FULL_COUNT = 'fullCount';
     
     /**
      * Stream attribute
      */
-    const ENTRY_STREAM = 'stream';
+    public const ENTRY_STREAM = 'stream';
     
     /**
      * TTL attribute
      */
-    const ENTRY_TTL = 'ttl';
+    public const ENTRY_TTL = 'ttl';
     
     /**
      * maxRuntime attribute
      */
-    const ENTRY_MAX_RUNTIME = 'maxRuntime';
+    public const ENTRY_MAX_RUNTIME = 'maxRuntime';
 
     /** 
      * transaction attribute (used internally)
      */
-    const ENTRY_TRANSACTION = 'transaction';
+    public const ENTRY_TRANSACTION = 'transaction';
 
     /**
      * Initialise the statement

@@ -25,62 +25,62 @@ class GraphHandler extends Handler
     /**
      * documents array index
      */
-    const ENTRY_GRAPH = 'graph';
+    public const ENTRY_GRAPH = 'graph';
 
     /**
      * conditional update of edges or vertices
      */
-    const OPTION_REVISION = 'revision';
+    public const OPTION_REVISION = 'revision';
 
     /**
      * vertex parameter
      */
-    const OPTION_VERTICES = 'vertices';
+    public const OPTION_VERTICES = 'vertices';
 
     /**
      * direction parameter
      */
-    const OPTION_EDGES = 'edges';
+    public const OPTION_EDGES = 'edges';
 
     /**
      * direction parameter
      */
-    const OPTION_KEY = '_key';
+    public const OPTION_KEY = '_key';
 
     /**
      * collection parameter
      */
-    const OPTION_COLLECTION = 'collection';
+    public const OPTION_COLLECTION = 'collection';
 
     /**
      * collections parameter
      */
-    const OPTION_COLLECTIONS = 'collections';
+    public const OPTION_COLLECTIONS = 'collections';
 
     /**
      * example parameter
      */
-    const KEY_FROM = '_from';
+    public const KEY_FROM = '_from';
 
     /**
      * example parameter
      */
-    const KEY_TO = '_to';
+    public const KEY_TO = '_to';
 
     /**
      * name parameter
      */
-    const OPTION_NAME = 'name';
+    public const OPTION_NAME = 'name';
 
     /**
      * edge definition parameter
      */
-    const OPTION_EDGE_DEFINITION = 'edgeDefinition';
+    public const OPTION_EDGE_DEFINITION = 'edgeDefinition';
 
     /**
      * edge definitions parameter
      */
-    const OPTION_EDGE_DEFINITIONS = 'edgeDefinitions';
+    public const OPTION_EDGE_DEFINITIONS = 'edgeDefinitions';
 
     /**
      * GraphHandler cache store
@@ -129,12 +129,12 @@ class GraphHandler extends Handler
     /**
      * orphan collection parameter
      */
-    const OPTION_ORPHAN_COLLECTIONS = 'orphanCollections';
+    public const OPTION_ORPHAN_COLLECTIONS = 'orphanCollections';
 
     /**
      * drop collection
      */
-    const OPTION_DROP_COLLECTION = 'dropCollection';
+    public const OPTION_DROP_COLLECTION = 'dropCollection';
 
     /**
      * batchsize

@@ -21,7 +21,7 @@ class StreamingTransaction extends TransactionBase
     /**
      * class constant for id values
      */
-    const ENTRY_ID = 'id';
+    public const ENTRY_ID = 'id';
 
     /**
      * The transaction id - assigned by the server

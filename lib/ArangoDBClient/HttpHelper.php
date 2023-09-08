@@ -21,52 +21,52 @@ class HttpHelper
     /**
      * HTTP POST string constant
      */
-    const METHOD_POST = 'POST';
+    public const METHOD_POST = 'POST';
 
     /**
      * HTTP PUT string constant
      */
-    const METHOD_PUT = 'PUT';
+    public const METHOD_PUT = 'PUT';
 
     /**
      * HTTP DELETE string constant
      */
-    const METHOD_DELETE = 'DELETE';
+    public const METHOD_DELETE = 'DELETE';
 
     /**
      * HTTP GET string constant
      */
-    const METHOD_GET = 'GET';
+    public const METHOD_GET = 'GET';
 
     /**
      * HTTP HEAD string constant
      */
-    const METHOD_HEAD = 'HEAD';
+    public const METHOD_HEAD = 'HEAD';
 
     /**
      * HTTP PATCH string constant
      */
-    const METHOD_PATCH = 'PATCH';
+    public const METHOD_PATCH = 'PATCH';
 
     /**
      * Chunk size (number of bytes processed in one batch)
      */
-    const CHUNK_SIZE = 8192;
+    public const CHUNK_SIZE = 8192;
 
     /**
      * End of line mark used in HTTP
      */
-    const EOL = "\r\n";
+    public const EOL = "\r\n";
 
     /**
      * Separator between header and body
      */
-    const SEPARATOR = "\r\n\r\n";
+    public const SEPARATOR = "\r\n\r\n";
 
     /**
      * HTTP protocol version used, hard-coded to version 1.1
      */
-    const PROTOCOL = 'HTTP/1.1';
+    public const PROTOCOL = 'HTTP/1.1';
 
     /**
      * Create a one-time HTTP connection by opening a socket to the server
@@ -124,12 +124,12 @@ class HttpHelper
     /**
      * Boundary string for batch request parts
      */
-    const MIME_BOUNDARY = 'XXXsubpartXXX';
+    public const MIME_BOUNDARY = 'XXXsubpartXXX';
 
     /**
      * HTTP Header for making an operation asynchronous
      */
-    const ASYNC_HEADER = 'X-Arango-Async';
+    public const ASYNC_HEADER = 'X-Arango-Async';
 
     /**
      * Create a request string (header and body)

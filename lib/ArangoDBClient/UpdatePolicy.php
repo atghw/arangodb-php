@@ -21,12 +21,12 @@ class UpdatePolicy
     /**
      * last update will win in case of conflicting versions
      */
-    const LAST = 'last';
+    public const LAST = 'last';
 
     /**
      * an error will be returned in case of conflicting versions
      */
-    const ERROR = 'error';
+    public const ERROR = 'error';
 
     /**
      * Check if the supplied policy value is valid

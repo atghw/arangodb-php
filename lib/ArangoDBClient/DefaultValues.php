@@ -23,94 +23,94 @@ abstract class DefaultValues
     /**
      * Default port number (used if no port specified)
      */
-    const DEFAULT_PORT = 8529;
+    public const DEFAULT_PORT = 8529;
 
     /**
      * Default timeout value (used if no timeout value specified)
      * @deprecated superseded by DEFAULT_CONNECT_TIMEOUT and DEFAULT_REQUEST_TIMEOUT
      */
-    const DEFAULT_TIMEOUT = 30;
+    public const DEFAULT_TIMEOUT = 30;
     
     /**
      * Default connect timeout value (used if no timeout value specified)
      */
-    const DEFAULT_CONNECT_TIMEOUT = 30;
+    public const DEFAULT_CONNECT_TIMEOUT = 30;
     
     /**
      * Default request timeout value (used if no timeout value specified)
      */
-    const DEFAULT_REQUEST_TIMEOUT = 30;
+    public const DEFAULT_REQUEST_TIMEOUT = 30;
     
     /**
      * Default number of failover servers to try (used in case there is an automatic failover)
      * if set to 0, then an unlimited amount of servers will be tried
      */
-    const DEFAULT_FAILOVER_TRIES = 3;
+    public const DEFAULT_FAILOVER_TRIES = 3;
     
     /**
      * Default max amount of time (in seconds) that is spent waiting on failover
      */
-    const DEFAULT_FAILOVER_TIMEOUT = 30;
+    public const DEFAULT_FAILOVER_TIMEOUT = 30;
     
     /**
      * Default Authorization type (use HTTP basic authentication)
      */
-    const DEFAULT_AUTH_TYPE = 'Basic';
+    public const DEFAULT_AUTH_TYPE = 'Basic';
 
     /**
      * Default value for waitForSync (fsync all data to disk on document updates/insertions/deletions)
      */
-    const DEFAULT_WAIT_SYNC = false;
+    public const DEFAULT_WAIT_SYNC = false;
 
     /**
      * Default value for createCollection (create the collection on the fly when the first document is added to an unknown collection)
      */
-    const DEFAULT_CREATE = false;
+    public const DEFAULT_CREATE = false;
 
     /**
      * Default value for HTTP Connection header
      */
-    const DEFAULT_CONNECTION = 'Keep-Alive';
+    public const DEFAULT_CONNECTION = 'Keep-Alive';
 
     /**
      * Default value for SSL certificate verification
      */
-    const DEFAULT_VERIFY_CERT = false;
+    public const DEFAULT_VERIFY_CERT = false;
     
     /**
      * Default value for SSL certificate host name verification
      */
-    const DEFAULT_VERIFY_CERT_NAME = false;
+    public const DEFAULT_VERIFY_CERT_NAME = false;
 
     /**
      * Default value for accepting self-signed SSL certificates
      */
-    const DEFAULT_ALLOW_SELF_SIGNED = true;
+    public const DEFAULT_ALLOW_SELF_SIGNED = true;
 
     /**
      * Default value for ciphers to be used in SSL
      */
-    const DEFAULT_CIPHERS = null;
+    public const DEFAULT_CIPHERS = null;
 
     /**
      * Default update policy
      */
-    const DEFAULT_UPDATE_POLICY = UpdatePolicy::ERROR;
+    public const DEFAULT_UPDATE_POLICY = UpdatePolicy::ERROR;
 
     /**
      * Default replace policy
      */
-    const DEFAULT_REPLACE_POLICY = UpdatePolicy::ERROR;
+    public const DEFAULT_REPLACE_POLICY = UpdatePolicy::ERROR;
 
     /**
      * Default delete policy
      */
-    const DEFAULT_DELETE_POLICY = UpdatePolicy::ERROR;
+    public const DEFAULT_DELETE_POLICY = UpdatePolicy::ERROR;
 
     /**
      * Default value for checking if data is UTF-8 conform
      */
-    const DEFAULT_CHECK_UTF8_CONFORM = false;
+    public const DEFAULT_CHECK_UTF8_CONFORM = false;
 }
 
 class_alias(DefaultValues::class, '\triagens\ArangoDb\DefaultValues');

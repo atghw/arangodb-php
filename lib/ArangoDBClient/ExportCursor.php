@@ -72,37 +72,37 @@ class ExportCursor
     /**
      * result entry for cursor id
      */
-    const ENTRY_ID = 'id';
+    public const ENTRY_ID = 'id';
 
     /**
      * result entry for "hasMore" flag
      */
-    const ENTRY_HASMORE = 'hasMore';
+    public const ENTRY_HASMORE = 'hasMore';
 
     /**
      * result entry for result documents
      */
-    const ENTRY_RESULT = 'result';
+    public const ENTRY_RESULT = 'result';
 
     /**
      * "flat" option entry (will treat the results as a simple array, not documents)
      */
-    const ENTRY_FLAT = '_flat';
+    public const ENTRY_FLAT = '_flat';
 
     /**
      * result entry for document count
      */
-    const ENTRY_COUNT = 'count';
+    public const ENTRY_COUNT = 'count';
 
     /**
      * "type" option entry (is used when converting the result into documents or edges objects)
      */
-    const ENTRY_TYPE = 'type';
+    public const ENTRY_TYPE = 'type';
 
     /**
      * "baseurl" option entry.
      */
-    const ENTRY_BASEURL = 'baseurl';
+    public const ENTRY_BASEURL = 'baseurl';
 
     /**
      * Initialize the cursor with the first results and some metadata

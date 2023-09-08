@@ -38,12 +38,12 @@ class Edge extends Document
      * Document _from index
      */
 
-    const ENTRY_FROM = '_from';
+    public const ENTRY_FROM = '_from';
 
     /**
      * Revision _to index
      */
-    const ENTRY_TO = '_to';
+    public const ENTRY_TO = '_to';
 
 
     /**

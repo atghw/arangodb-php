@@ -26,42 +26,42 @@ class EdgeHandler extends DocumentHandler
     /**
      * documents array index
      */
-    const ENTRY_DOCUMENTS = 'edge';
+    public const ENTRY_DOCUMENTS = 'edge';
 
     /**
      * edges array index
      */
-    const ENTRY_EDGES = 'edges';
+    public const ENTRY_EDGES = 'edges';
 
     /**
      * collection parameter
      */
-    const OPTION_COLLECTION = 'collection';
+    public const OPTION_COLLECTION = 'collection';
 
     /**
      * example parameter
      */
-    const OPTION_EXAMPLE = 'example';
+    public const OPTION_EXAMPLE = 'example';
 
     /**
      * example parameter
      */
-    const OPTION_FROM = 'from';
+    public const OPTION_FROM = 'from';
 
     /**
      * example parameter
      */
-    const OPTION_TO = 'to';
+    public const OPTION_TO = 'to';
 
     /**
      * vertex parameter
      */
-    const OPTION_VERTEX = 'vertex';
+    public const OPTION_VERTEX = 'vertex';
 
     /**
      * direction parameter
      */
-    const OPTION_DIRECTION = 'direction';
+    public const OPTION_DIRECTION = 'direction';
 
     /**
      * Construct a new handler

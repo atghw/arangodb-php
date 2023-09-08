@@ -118,62 +118,62 @@ class Cursor implements \Iterator
     /**
      * result entry for cursor id
      */
-    const ENTRY_ID = 'id';
+    public const ENTRY_ID = 'id';
 
     /**
      * result entry for "hasMore" flag
      */
-    const ENTRY_HASMORE = 'hasMore';
+    public const ENTRY_HASMORE = 'hasMore';
 
     /**
      * result entry for result documents
      */
-    const ENTRY_RESULT = 'result';
+    public const ENTRY_RESULT = 'result';
 
     /**
      * result entry for extra data
      */
-    const ENTRY_EXTRA = 'extra';
+    public const ENTRY_EXTRA = 'extra';
 
     /**
      * result entry for stats
      */
-    const ENTRY_STATS = 'stats';
+    public const ENTRY_STATS = 'stats';
 
     /**
      * result entry for the full count (ignoring the outermost LIMIT)
      */
-    const FULL_COUNT = 'fullCount';
+    public const FULL_COUNT = 'fullCount';
 
     /**
      * cache option entry
      */
-    const ENTRY_CACHE = 'cache';
+    public const ENTRY_CACHE = 'cache';
 
     /**
      * cached result attribute - whether or not the result was served from the AQL query cache
      */
-    const ENTRY_CACHED = 'cached';
+    public const ENTRY_CACHED = 'cached';
 
     /**
      * sanitize option entry
      */
-    const ENTRY_SANITIZE = '_sanitize';
+    public const ENTRY_SANITIZE = '_sanitize';
 
     /**
      * "flat" option entry (will treat the results as a simple array, not documents)
      */
-    const ENTRY_FLAT = '_flat';
+    public const ENTRY_FLAT = '_flat';
 
     /**
      * "objectType" option entry.
      */
-    const ENTRY_TYPE = 'objectType';
+    public const ENTRY_TYPE = 'objectType';
 
     /**
      * "baseurl" option entry.
      */
-    const ENTRY_BASEURL = 'baseurl';
+    public const ENTRY_BASEURL = 'baseurl';
 
     /**
      * Initialise the cursor with the first results and some metadata

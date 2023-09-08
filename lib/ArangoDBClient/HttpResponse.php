@@ -72,12 +72,12 @@ class HttpResponse
     /**
      * HTTP location header
      */
-    const HEADER_LOCATION = 'location';
+    public const HEADER_LOCATION = 'location';
     
     /**
      * HTTP leader endpoint header, used in failover
      */
-    const HEADER_LEADER_ENDPOINT = 'x-arango-endpoint';
+    public const HEADER_LEADER_ENDPOINT = 'x-arango-endpoint';
 
     /**
      * Set up the response

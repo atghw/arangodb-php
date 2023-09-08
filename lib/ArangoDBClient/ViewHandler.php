@@ -23,7 +23,7 @@ class ViewHandler extends Handler
     /**
      * rename option
      */
-    const OPTION_RENAME = 'rename';
+    public const OPTION_RENAME = 'rename';
 
     /**
      * Create a view

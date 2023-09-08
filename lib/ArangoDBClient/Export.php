@@ -85,27 +85,27 @@ class Export
     /**
      * Count option index
      */
-    const ENTRY_COUNT = 'count';
+    public const ENTRY_COUNT = 'count';
 
     /**
      * Batch size option index
      */
-    const ENTRY_BATCHSIZE = 'batchSize';
+    public const ENTRY_BATCHSIZE = 'batchSize';
 
     /**
      * Flush option index
      */
-    const ENTRY_FLUSH = 'flush';
+    public const ENTRY_FLUSH = 'flush';
 
     /**
      * Export restrictions
      */
-    const ENTRY_RESTRICT = 'restrict';
+    public const ENTRY_RESTRICT = 'restrict';
 
     /**
      * Optional limit for the number of documents
      */
-    const ENTRY_LIMIT = 'limit';
+    public const ENTRY_LIMIT = 'limit';
 
     /**
      * Initialize the export

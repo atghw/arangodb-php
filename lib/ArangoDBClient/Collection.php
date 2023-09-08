@@ -128,122 +128,122 @@ class Collection
     /**
      * Collection id index
      */
-    const ENTRY_ID = 'id';
+    public const ENTRY_ID = 'id';
 
     /**
      * Collection name index
      */
-    const ENTRY_NAME = 'name';
+    public const ENTRY_NAME = 'name';
 
     /**
      * Collection type index
      */
-    const ENTRY_TYPE = 'type';
+    public const ENTRY_TYPE = 'type';
 
     /**
      * Collection 'waitForSync' index
      */
-    const ENTRY_WAIT_SYNC = 'waitForSync';
+    public const ENTRY_WAIT_SYNC = 'waitForSync';
 
     /**
      * Collection 'status' index
      */
-    const ENTRY_STATUS = 'status';
+    public const ENTRY_STATUS = 'status';
 
     /**
      * Collection 'keyOptions' index
      */
-    const ENTRY_KEY_OPTIONS = 'keyOptions';
+    public const ENTRY_KEY_OPTIONS = 'keyOptions';
     
     /**
      * Collection 'schema' index
      */
-    const ENTRY_SCHEMA = 'schema';
+    public const ENTRY_SCHEMA = 'schema';
 
     /**
      * Collection 'isSystem' index
      */
-    const ENTRY_IS_SYSTEM = 'isSystem';
+    public const ENTRY_IS_SYSTEM = 'isSystem';
 
     /**
      * Collection 'distributeShardsLike' index
      */
-    const ENTRY_DISTRIBUTE_SHARDS_LIKE = 'distributeShardsLike';
+    public const ENTRY_DISTRIBUTE_SHARDS_LIKE = 'distributeShardsLike';
 
     /**
      * Collection 'numberOfShards' index
      */
-    const ENTRY_NUMBER_OF_SHARDS = 'numberOfShards';
+    public const ENTRY_NUMBER_OF_SHARDS = 'numberOfShards';
     
     /**
      * Collection 'replicationFactor' index
      */
-    const ENTRY_REPLICATION_FACTOR = 'replicationFactor';
+    public const ENTRY_REPLICATION_FACTOR = 'replicationFactor';
     
     /**
      * Collection 'writeConcern' index
      */
-    const ENTRY_WRITE_CONCERN = 'writeConcern';
+    public const ENTRY_WRITE_CONCERN = 'writeConcern';
     
     /**
      * Collection 'sharding' index
      */
-    const ENTRY_SHARDING = 'sharding';
+    public const ENTRY_SHARDING = 'sharding';
     
     /**
      * Collection 'shardingStrategy' index
      */
-    const ENTRY_SHARDING_STRATEGY = 'shardingStrategy';
+    public const ENTRY_SHARDING_STRATEGY = 'shardingStrategy';
     
     /**
      * Collection 'shardKeys' index
      */
-    const ENTRY_SHARD_KEYS = 'shardKeys';
+    public const ENTRY_SHARD_KEYS = 'shardKeys';
     
     /**
      * Collection 'smartJoinAttribute' index
      */
-    const ENTRY_SMART_JOIN_ATTRIBUTE = 'smartJoinAttribute';
+    public const ENTRY_SMART_JOIN_ATTRIBUTE = 'smartJoinAttribute';
 
     /**
      * properties option
      */
-    const OPTION_PROPERTIES = 'properties';
+    public const OPTION_PROPERTIES = 'properties';
 
     /**
      * document collection type
      */
-    const TYPE_DOCUMENT = 2;
+    public const TYPE_DOCUMENT = 2;
 
     /**
      * edge collection type
      */
-    const TYPE_EDGE = 3;
+    public const TYPE_EDGE = 3;
 
     /**
      * New born collection
      */
-    const STATUS_NEW_BORN = 1;
+    public const STATUS_NEW_BORN = 1;
 
     /**
      * Unloaded collection
      */
-    const STATUS_UNLOADED = 2;
+    public const STATUS_UNLOADED = 2;
 
     /**
      * Loaded collection
      */
-    const STATUS_LOADED = 3;
+    public const STATUS_LOADED = 3;
 
     /**
      * Collection being unloaded
      */
-    const STATUS_BEING_UNLOADED = 4;
+    public const STATUS_BEING_UNLOADED = 4;
 
     /**
      * Deleted collection
      */
-    const STATUS_DELETED = 5;
+    public const STATUS_DELETED = 5;
 
     /**
      * Constructs an empty collection

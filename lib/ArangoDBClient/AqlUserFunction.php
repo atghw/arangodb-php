@@ -66,12 +66,12 @@ class AqlUserFunction
     /**
      * Collections index
      */
-    const ENTRY_NAME = 'name';
+    public const ENTRY_NAME = 'name';
 
     /**
      * Action index
      */
-    const ENTRY_CODE = 'code';
+    public const ENTRY_CODE = 'code';
 
 
     /**

@@ -39,17 +39,17 @@ class View
     /**
      * View id index
      */
-    const ENTRY_ID = 'id';
+    public const ENTRY_ID = 'id';
 
     /**
      * View name index
      */
-    const ENTRY_NAME = 'name';
+    public const ENTRY_NAME = 'name';
     
     /**
      * View type index
      */
-    const ENTRY_TYPE = 'type';
+    public const ENTRY_TYPE = 'type';
 
     /**
      * The view type

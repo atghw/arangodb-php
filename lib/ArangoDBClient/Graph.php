@@ -26,27 +26,27 @@ class Graph extends Document
     /**
      * Graph edge definitions
      */
-    const ENTRY_EDGE_DEFINITIONS = 'edgeDefinitions';
+    public const ENTRY_EDGE_DEFINITIONS = 'edgeDefinitions';
 
     /**
      * Graph edge definitions from collections
      */
-    const ENTRY_FROM = 'from';
+    public const ENTRY_FROM = 'from';
 
     /**
      * Graph edge definitions to collections
      */
-    const ENTRY_TO = 'to';
+    public const ENTRY_TO = 'to';
 
     /**
      * Graph edge definitions collections
      */
-    const ENTRY_COLLECTION = 'collection';
+    public const ENTRY_COLLECTION = 'collection';
 
     /**
      * Graph orphan collections
      */
-    const ENTRY_ORPHAN_COLLECTIONS = 'orphanCollections';
+    public const ENTRY_ORPHAN_COLLECTIONS = 'orphanCollections';
 
     /**
      * The list of edge definitions defining the graph.

@@ -25,17 +25,17 @@ class Database
     /**
      * Databases index
      */
-    const ENTRY_DATABASE_NAME = 'name';
+    public const ENTRY_DATABASE_NAME = 'name';
 
     /**
      * Users index
      */
-    const ENTRY_DATABASE_USERS = 'users';
+    public const ENTRY_DATABASE_USERS = 'users';
     
     /**
      * Options index
      */
-    const ENTRY_OPTIONS = 'options';
+    public const ENTRY_OPTIONS = 'options';
 
     /**
      * creates a database

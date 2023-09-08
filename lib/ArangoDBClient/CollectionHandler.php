@@ -25,212 +25,212 @@ class CollectionHandler extends Handler
     /**
      * documents array index
      */
-    const ENTRY_DOCUMENTS = 'documents';
+    public const ENTRY_DOCUMENTS = 'documents';
 
     /**
      * collection parameter
      */
-    const OPTION_COLLECTION = 'collection';
+    public const OPTION_COLLECTION = 'collection';
 
     /**
      * example parameter
      */
-    const OPTION_EXAMPLE = 'example';
+    public const OPTION_EXAMPLE = 'example';
 
     /**
      * example parameter
      */
-    const OPTION_NEW_VALUE = 'newValue';
+    public const OPTION_NEW_VALUE = 'newValue';
 
     /**
      * example parameter
      */
-    const OPTION_CREATE_COLLECTION = 'createCollection';
+    public const OPTION_CREATE_COLLECTION = 'createCollection';
 
     /**
      * attribute parameter
      */
-    const OPTION_ATTRIBUTE = 'attribute';
+    public const OPTION_ATTRIBUTE = 'attribute';
 
     /**
      * keys parameter
      */
-    const OPTION_KEYS = 'keys';
+    public const OPTION_KEYS = 'keys';
 
     /**
      * stream parameter
      */
-    const OPTION_STREAM = 'stream';
+    public const OPTION_STREAM = 'stream';
 
     /**
      * left parameter
      */
-    const OPTION_LEFT = 'left';
+    public const OPTION_LEFT = 'left';
 
     /**
      * right parameter
      */
-    const OPTION_RIGHT = 'right';
+    public const OPTION_RIGHT = 'right';
 
     /**
      * closed parameter
      */
-    const OPTION_CLOSED = 'closed';
+    public const OPTION_CLOSED = 'closed';
 
     /**
      * latitude parameter
      */
-    const OPTION_LATITUDE = 'latitude';
+    public const OPTION_LATITUDE = 'latitude';
 
     /**
      * longitude parameter
      */
-    const OPTION_LONGITUDE = 'longitude';
+    public const OPTION_LONGITUDE = 'longitude';
 
     /**
      * distance parameter
      */
-    const OPTION_DISTANCE = 'distance';
+    public const OPTION_DISTANCE = 'distance';
 
     /**
      * radius parameter
      */
-    const OPTION_RADIUS = 'radius';
+    public const OPTION_RADIUS = 'radius';
 
     /**
      * skip parameter
      */
-    const OPTION_SKIP = 'skip';
+    public const OPTION_SKIP = 'skip';
 
     /**
      * index parameter
      */
-    const OPTION_INDEX = 'index';
+    public const OPTION_INDEX = 'index';
 
     /**
      * limit parameter
      */
-    const OPTION_LIMIT = 'limit';
+    public const OPTION_LIMIT = 'limit';
 
     /**
      * fields
      */
-    const OPTION_FIELDS = 'fields';
+    public const OPTION_FIELDS = 'fields';
 
     /**
      * unique
      */
-    const OPTION_UNIQUE = 'unique';
+    public const OPTION_UNIQUE = 'unique';
 
     /**
      * type
      */
-    const OPTION_TYPE = 'type';
+    public const OPTION_TYPE = 'type';
 
     /**
      * size option
      */
-    const OPTION_SIZE = 'size';
+    public const OPTION_SIZE = 'size';
 
     /**
      * geo index option
      */
-    const OPTION_GEO_INDEX = 'geo';
+    public const OPTION_GEO_INDEX = 'geo';
 
     /**
      * geoJson option
      */
-    const OPTION_GEOJSON = 'geoJson';
+    public const OPTION_GEOJSON = 'geoJson';
 
     /**
      * hash index option
      */
-    const OPTION_HASH_INDEX = 'hash';
+    public const OPTION_HASH_INDEX = 'hash';
 
     /**
      * fulltext index option
      */
-    const OPTION_FULLTEXT_INDEX = 'fulltext';
+    public const OPTION_FULLTEXT_INDEX = 'fulltext';
 
     /**
      * minLength option
      */
-    const OPTION_MIN_LENGTH = 'minLength';
+    public const OPTION_MIN_LENGTH = 'minLength';
 
     /**
      * skiplist index option
      */
-    const OPTION_SKIPLIST_INDEX = 'skiplist';
+    public const OPTION_SKIPLIST_INDEX = 'skiplist';
 
     /**
      * persistent index option
      */
-    const OPTION_PERSISTENT_INDEX = 'persistent';
+    public const OPTION_PERSISTENT_INDEX = 'persistent';
     
     /**
      * ttl index option
      */
-    const OPTION_TTL_INDEX = 'ttl';
+    public const OPTION_TTL_INDEX = 'ttl';
     
     /**
      * expireAfter option
      */
-    const OPTION_EXPIRE_AFTER = 'expireAfter';
+    public const OPTION_EXPIRE_AFTER = 'expireAfter';
     
     /**
      * inBackground option
      */
-    const OPTION_IN_BACKGROUND = 'inBackground';
+    public const OPTION_IN_BACKGROUND = 'inBackground';
 
     /**
      * sparse index option
      */
-    const OPTION_SPARSE = 'sparse';
+    public const OPTION_SPARSE = 'sparse';
 
     /**
      * count option
      */
-    const OPTION_COUNT = 'count';
+    public const OPTION_COUNT = 'count';
 
     /**
      * query option
      */
-    const OPTION_QUERY = 'query';
+    public const OPTION_QUERY = 'query';
 
     /**
      * checksum option
      */
-    const OPTION_CHECKSUM = 'checksum';
+    public const OPTION_CHECKSUM = 'checksum';
 
     /**
      * revision option
      */
-    const OPTION_REVISION = 'revision';
+    public const OPTION_REVISION = 'revision';
     
     /**
      * responsible shard option
      */
-    const OPTION_RESPONSIBLE_SHARD = 'responsibleShard';
+    public const OPTION_RESPONSIBLE_SHARD = 'responsibleShard';
     
     /**
      * shards option
      */
-    const OPTION_SHARDS = 'shards';
+    public const OPTION_SHARDS = 'shards';
 
     /**
      * properties option
      */
-    const OPTION_PROPERTIES = 'properties';
+    public const OPTION_PROPERTIES = 'properties';
 
     /**
      * figures option
      */
-    const OPTION_FIGURES = 'figures';
+    public const OPTION_FIGURES = 'figures';
 
     /**
      * load option (deprecated)
      */
-    const OPTION_LOAD = 'load';
+    public const OPTION_LOAD = 'load';
 
     /**
      * Creates a new collection on the server
@@ -334,23 +334,23 @@ class CollectionHandler extends Handler
     /**
      * unload option (deprecated)
      */
-    const OPTION_UNLOAD = 'unload';
+    public const OPTION_UNLOAD = 'unload';
 
     /**
      * truncate option
      */
-    const OPTION_TRUNCATE = 'truncate';
+    public const OPTION_TRUNCATE = 'truncate';
 
     /**
      * rename option
      */
-    const OPTION_RENAME = 'rename';
+    public const OPTION_RENAME = 'rename';
 
 
     /**
      * exclude system collections
      */
-    const OPTION_EXCLUDE_SYSTEM = 'excludeSystem';
+    public const OPTION_EXCLUDE_SYSTEM = 'excludeSystem';
 
 
     /**

@@ -35,32 +35,32 @@ class TransactionBase
     /**
      * Collections index
      */
-    const ENTRY_COLLECTIONS = 'collections';
+    public const ENTRY_COLLECTIONS = 'collections';
 
     /**
      * WaitForSync index
      */
-    const ENTRY_WAIT_FOR_SYNC = 'waitForSync';
+    public const ENTRY_WAIT_FOR_SYNC = 'waitForSync';
 
     /**
      * Lock timeout index
      */
-    const ENTRY_LOCK_TIMEOUT = 'lockTimeout';
+    public const ENTRY_LOCK_TIMEOUT = 'lockTimeout';
 
     /**
      * Read index
      */
-    const ENTRY_READ = 'read';
+    public const ENTRY_READ = 'read';
 
     /**
      * WRITE index
      */
-    const ENTRY_WRITE = 'write';
+    public const ENTRY_WRITE = 'write';
     
     /**
      * EXCLUSIVE index
      */
-    const ENTRY_EXCLUSIVE = 'exclusive';
+    public const ENTRY_EXCLUSIVE = 'exclusive';
 
     /**
      * Initialise the transaction object

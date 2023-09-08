@@ -32,7 +32,7 @@ class Autoloader
     /**
      * Class file extension
      */
-    const EXTENSION = '.php';
+    public const EXTENSION = '.php';
 
     /**
      * Initialise the autoloader

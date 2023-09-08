@@ -43,17 +43,17 @@ class Traversal
     /**
      * count fields
      */
-    const OPTION_FIELDS = 'fields';
+    public const OPTION_FIELDS = 'fields';
 
     /**
      * Collections index
      */
-    const ENTRY_STARTVERTEX = 'startVertex';
+    public const ENTRY_STARTVERTEX = 'startVertex';
 
     /**
      * Action index
      */
-    const ENTRY_EDGECOLLECTION = 'edgeCollection';
+    public const ENTRY_EDGECOLLECTION = 'edgeCollection';
 
     /**
      * @var $_action string The action property of the traversal.

@@ -32,22 +32,22 @@ class Analyzer
     /**
      * Analyzer name index
      */
-    const ENTRY_NAME = 'name';
+    public const ENTRY_NAME = 'name';
     
     /**
      * Analyzer type index
      */
-    const ENTRY_TYPE = 'type';
+    public const ENTRY_TYPE = 'type';
     
     /**
      * Analyzer properties index
      */
-    const ENTRY_PROPERTIES = 'properties';
+    public const ENTRY_PROPERTIES = 'properties';
     
     /**
      * Analyzer features index
      */
-    const ENTRY_FEATURES = 'features';
+    public const ENTRY_FEATURES = 'features';
 
     private array $_features;
     private array $_properties;

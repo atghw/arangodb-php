@@ -40,42 +40,42 @@ class Endpoint
     /**
      * TCP endpoint type
      */
-    const TYPE_TCP = 'tcp';
+    public const TYPE_TCP = 'tcp';
 
     /**
      * SSL endpoint type
      */
-    const TYPE_SSL = 'ssl';
+    public const TYPE_SSL = 'ssl';
 
     /**
      * UNIX socket endpoint type
      */
-    const TYPE_UNIX = 'unix';
+    public const TYPE_UNIX = 'unix';
 
     /**
      * Regexp for TCP endpoints
      */
-    const REGEXP_TCP = '/^(tcp|http):\/\/(.+?):(\d+)\/?$/';
+    public const REGEXP_TCP = '/^(tcp|http):\/\/(.+?):(\d+)\/?$/';
 
     /**
      * Regexp for SSL endpoints
      */
-    const REGEXP_SSL = '/^(ssl|https):\/\/(.+?):(\d+)\/?$/';
+    public const REGEXP_SSL = '/^(ssl|https):\/\/(.+?):(\d+)\/?$/';
 
     /**
      * Regexp for UNIX socket endpoints
      */
-    const REGEXP_UNIX = '/^unix:\/\/(.+)$/';
+    public const REGEXP_UNIX = '/^unix:\/\/(.+)$/';
 
     /**
      * Endpoint index
      */
-    const ENTRY_ENDPOINT = 'endpoint';
+    public const ENTRY_ENDPOINT = 'endpoint';
 
     /**
      * Databases index
      */
-    const ENTRY_DATABASES = 'databases';
+    public const ENTRY_DATABASES = 'databases';
 
 
     /**

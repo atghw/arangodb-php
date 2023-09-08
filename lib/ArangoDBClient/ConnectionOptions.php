@@ -52,214 +52,214 @@ class ConnectionOptions implements \ArrayAccess
     /**
      * Endpoint string index constant
      */
-    const OPTION_ENDPOINT = 'endpoint';
+    public const OPTION_ENDPOINT = 'endpoint';
 
     /**
      * Host name string index constant (deprecated, use endpoint instead)
      */
-    const OPTION_HOST = 'host';
+    public const OPTION_HOST = 'host';
 
     /**
      * Port number index constant (deprecated, use endpoint instead)
      */
-    const OPTION_PORT = 'port';
+    public const OPTION_PORT = 'port';
 
     /**
      * Timeout value index constant
      * @deprecated superseded by OPTION_CONNECT_TIMEOUT and OPTION_REQUEST_TIMEOUT
      */
-    const OPTION_TIMEOUT = 'timeout';
+    public const OPTION_TIMEOUT = 'timeout';
 
     /**
      * Connect timeout value index constant
      */
-    const OPTION_CONNECT_TIMEOUT = 'connectTimeout';
+    public const OPTION_CONNECT_TIMEOUT = 'connectTimeout';
 
     /**
      * Request timeout value index constant
      */
-    const OPTION_REQUEST_TIMEOUT = 'requestTimeout';
+    public const OPTION_REQUEST_TIMEOUT = 'requestTimeout';
 
     /**
      * Number of servers tried in case of failover
      * if set to 0, then an unlimited amount of servers will be tried
      */
-    const OPTION_FAILOVER_TRIES = 'failoverTries';
+    public const OPTION_FAILOVER_TRIES = 'failoverTries';
 
     /**
      * Max amount of time (in seconds) that is spent waiting on failover
      */
-    const OPTION_FAILOVER_TIMEOUT = 'failoverTimeout';
+    public const OPTION_FAILOVER_TIMEOUT = 'failoverTimeout';
 
     /**
      * Trace function index constant
      */
-    const OPTION_TRACE = 'trace';
+    public const OPTION_TRACE = 'trace';
 
     /**
      * "verify certificates" index constant
      */
-    const OPTION_VERIFY_CERT = 'verifyCert';
+    public const OPTION_VERIFY_CERT = 'verifyCert';
 
     /**
      * "verify certificate host name" index constant
      */
-    const OPTION_VERIFY_CERT_NAME = 'verifyCertName';
+    public const OPTION_VERIFY_CERT_NAME = 'verifyCertName';
 
     /**
      * "allow self-signed" index constant
      */
-    const OPTION_ALLOW_SELF_SIGNED = 'allowSelfSigned';
+    public const OPTION_ALLOW_SELF_SIGNED = 'allowSelfSigned';
 
     /**
      * "caFile" index constant
      */
-    const OPTION_CA_FILE = 'caFile';
+    public const OPTION_CA_FILE = 'caFile';
 
     /**
      * ciphers allowed to be used in SSL
      */
-    const OPTION_CIPHERS = 'ciphers';
+    public const OPTION_CIPHERS = 'ciphers';
 
     /**
      * Enhanced trace
      */
-    const OPTION_ENHANCED_TRACE = 'enhancedTrace';
+    public const OPTION_ENHANCED_TRACE = 'enhancedTrace';
 
     /**
      * "Create collections if they don't exist" index constant
      */
-    const OPTION_CREATE = 'createCollection';
+    public const OPTION_CREATE = 'createCollection';
 
     /**
      * Update revision constant
      */
-    const OPTION_REVISION = 'rev';
+    public const OPTION_REVISION = 'rev';
 
     /**
      * Update policy index constant
      */
-    const OPTION_UPDATE_POLICY = 'policy';
+    public const OPTION_UPDATE_POLICY = 'policy';
 
     /**
      * Update keepNull constant
      */
-    const OPTION_UPDATE_KEEPNULL = 'keepNull';
+    public const OPTION_UPDATE_KEEPNULL = 'keepNull';
 
     /**
      * Replace policy index constant
      */
-    const OPTION_REPLACE_POLICY = 'policy';
+    public const OPTION_REPLACE_POLICY = 'policy';
 
     /**
      * Delete policy index constant
      */
-    const OPTION_DELETE_POLICY = 'policy';
+    public const OPTION_DELETE_POLICY = 'policy';
 
     /**
      * Wait for sync index constant
      */
-    const OPTION_WAIT_SYNC = 'waitForSync';
+    public const OPTION_WAIT_SYNC = 'waitForSync';
 
     /**
      * Limit index constant
      */
-    const OPTION_LIMIT = 'limit';
+    public const OPTION_LIMIT = 'limit';
 
     /**
      * Skip index constant
      */
-    const OPTION_SKIP = 'skip';
+    public const OPTION_SKIP = 'skip';
 
     /**
      * Batch size index constant
      */
-    const OPTION_BATCHSIZE = 'batchSize';
+    public const OPTION_BATCHSIZE = 'batchSize';
 
     /**
      * Wait for sync index constant
      */
-    const OPTION_IS_SYSTEM = 'isSystem';
+    public const OPTION_IS_SYSTEM = 'isSystem';
 
     /**
      * Authentication JWT
      */
-    const OPTION_AUTH_JWT = 'Jwt';
+    public const OPTION_AUTH_JWT = 'Jwt';
 
     /**
      * Authentication user name
      */
-    const OPTION_AUTH_USER = 'AuthUser';
+    public const OPTION_AUTH_USER = 'AuthUser';
 
     /**
      * Authentication password
      */
-    const OPTION_AUTH_PASSWD = 'AuthPasswd';
+    public const OPTION_AUTH_PASSWD = 'AuthPasswd';
 
     /**
      * Authentication type
      */
-    const OPTION_AUTH_TYPE = 'AuthType';
+    public const OPTION_AUTH_TYPE = 'AuthType';
 
     /**
      * Connection
      */
-    const OPTION_CONNECTION = 'Connection';
+    public const OPTION_CONNECTION = 'Connection';
 
     /**
      * Reconnect flag
      */
-    const OPTION_RECONNECT = 'Reconnect';
+    public const OPTION_RECONNECT = 'Reconnect';
 
     /**
      * Batch flag
      */
-    const OPTION_BATCH = 'Batch';
+    public const OPTION_BATCH = 'Batch';
 
     /**
      * Batchpart flag
      */
-    const OPTION_BATCHPART = 'BatchPart';
+    public const OPTION_BATCHPART = 'BatchPart';
 
     /**
      * Database flag
      */
-    const OPTION_DATABASE = 'database';
+    public const OPTION_DATABASE = 'database';
 
     /**
      * UTF-8 CHeck Flag
      */
-    const OPTION_CHECK_UTF8_CONFORM = 'CheckUtf8Conform';
+    public const OPTION_CHECK_UTF8_CONFORM = 'CheckUtf8Conform';
 
     /**
      * Entry for memcached servers array
      */
-    const OPTION_MEMCACHED_SERVERS = 'memcachedServers';
+    public const OPTION_MEMCACHED_SERVERS = 'memcachedServers';
 
     /**
      * Entry for memcached options array
      */
-    const OPTION_MEMCACHED_OPTIONS = 'memcachedOptions';
+    public const OPTION_MEMCACHED_OPTIONS = 'memcachedOptions';
 
     /**
      * Entry for memcached endpoints key
      */
-    const OPTION_MEMCACHED_ENDPOINTS_KEY = 'memcachedEndpointsKey';
+    public const OPTION_MEMCACHED_ENDPOINTS_KEY = 'memcachedEndpointsKey';
 
     /**
      * Entry for memcached persistend id
      */
-    const OPTION_MEMCACHED_PERSISTENT_ID = 'memcachedPersistentId';
+    public const OPTION_MEMCACHED_PERSISTENT_ID = 'memcachedPersistentId';
 
     /**
      * Entry for memcached cache ttl
      */
-    const OPTION_MEMCACHED_TTL = 'memcachedTtl';
+    public const OPTION_MEMCACHED_TTL = 'memcachedTtl';
 
     /**
      * Entry for notification callback
      */
-    const OPTION_NOTIFY_CALLBACK = 'notifyCallback';
+    public const OPTION_NOTIFY_CALLBACK = 'notifyCallback';
 
     /**
      * Set defaults, use options provided by client and validate them

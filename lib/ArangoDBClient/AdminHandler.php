@@ -26,7 +26,7 @@ class AdminHandler extends Handler
     /**
      * details for server version
      */
-    const OPTION_DETAILS = 'details';
+    public const OPTION_DETAILS = 'details';
     
     /**
      * Get the server's storage engine 

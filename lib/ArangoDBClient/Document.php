@@ -88,52 +88,52 @@ class Document implements \JsonSerializable
     /**
      * Document id index
      */
-    const ENTRY_ID = '_id';
+    public const ENTRY_ID = '_id';
 
     /**
      * Document key index
      */
-    const ENTRY_KEY = '_key';
+    public const ENTRY_KEY = '_key';
 
     /**
      * Revision id index
      */
-    const ENTRY_REV = '_rev';
+    public const ENTRY_REV = '_rev';
 
     /**
      * isNew id index
      */
-    const ENTRY_ISNEW = '_isNew';
+    public const ENTRY_ISNEW = '_isNew';
 
     /**
      * hidden attribute index
      */
-    const ENTRY_HIDDENATTRIBUTES = '_hiddenAttributes';
+    public const ENTRY_HIDDENATTRIBUTES = '_hiddenAttributes';
 
     /**
      * hidden attribute index
      */
-    const ENTRY_IGNOREHIDDENATTRIBUTES = '_ignoreHiddenAttributes';
+    public const ENTRY_IGNOREHIDDENATTRIBUTES = '_ignoreHiddenAttributes';
 
     /**
      * waitForSync option index
      */
-    const OPTION_WAIT_FOR_SYNC = 'waitForSync';
+    public const OPTION_WAIT_FOR_SYNC = 'waitForSync';
 
     /**
      * policy option index
      */
-    const OPTION_POLICY = 'policy';
+    public const OPTION_POLICY = 'policy';
 
     /**
      * keepNull option index
      */
-    const OPTION_KEEPNULL = 'keepNull';
+    public const OPTION_KEEPNULL = 'keepNull';
     
     /**
      * regular expression used for key validation
      */
-    const KEY_REGEX_PART = '[a-zA-Z0-9_:.@\\-()+,=;$!*\'%]{1,254}';
+    public const KEY_REGEX_PART = '[a-zA-Z0-9_:.@\\-()+,=;$!*\'%]{1,254}';
 
     /**
      * Constructs an empty document

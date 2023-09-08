@@ -29,42 +29,42 @@ class DocumentHandler extends Handler
     /**
      * documents array index
      */
-    const ENTRY_DOCUMENTS = 'documents';
+    public const ENTRY_DOCUMENTS = 'documents';
 
     /**
      * collection parameter
      */
-    const OPTION_COLLECTION = 'collection';
+    public const OPTION_COLLECTION = 'collection';
 
     /**
      * example parameter
      */
-    const OPTION_EXAMPLE = 'example';
+    public const OPTION_EXAMPLE = 'example';
     
     /**
      * overwrite option (deprecated)
      */
-    const OPTION_OVERWRITE = 'overwrite';
+    public const OPTION_OVERWRITE = 'overwrite';
     
     /**
      * overwriteMode option
      */
-    const OPTION_OVERWRITE_MODE = 'overwriteMode';
+    public const OPTION_OVERWRITE_MODE = 'overwriteMode';
     
     /**
      * option for returning the old document
      */
-    const OPTION_RETURN_OLD = 'returnOld';
+    public const OPTION_RETURN_OLD = 'returnOld';
     
     /**
      * option for returning the new document
      */
-    const OPTION_RETURN_NEW = 'returnNew';
+    public const OPTION_RETURN_NEW = 'returnNew';
     
     /**
      * silent option 
      */
-    const OPTION_SILENT = 'silent';
+    public const OPTION_SILENT = 'silent';
 
 
     /**

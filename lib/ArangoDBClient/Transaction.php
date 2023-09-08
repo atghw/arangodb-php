@@ -61,12 +61,12 @@ class Transaction extends TransactionBase
     /**
      * Action index
      */
-    const ENTRY_ACTION = 'action';
+    public const ENTRY_ACTION = 'action';
 
     /**
      * Params index
      */
-    const ENTRY_PARAMS = 'params';
+    public const ENTRY_PARAMS = 'params';
 
     /**
      * @var $_action string The action property of the transaction.

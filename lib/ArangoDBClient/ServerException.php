@@ -38,12 +38,12 @@ class ServerException extends Exception
     /**
      * Error number index
      */
-    const ENTRY_CODE = 'errorNum';
+    public const ENTRY_CODE = 'errorNum';
 
     /**
      * Error message index
      */
-    const ENTRY_MESSAGE = 'errorMessage';
+    public const ENTRY_MESSAGE = 'errorMessage';
 
     /**
      * Return a string representation of the exception
